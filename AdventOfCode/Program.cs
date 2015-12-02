@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode.Solutions;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            var fileInfo = Day1.GetInputFileInfo();
+            var fileInfo = Day2.GetInputFileInfo();
 
             if (File.Exists(fileInfo.FullName))
             {
@@ -19,7 +20,7 @@ namespace AdventOfCode
                 {
                     using (var fileReader = new StreamReader(fileStream))
                     {
-                        Day1.ProcessInput(fileReader);
+                        Day2.ProcessInput(fileReader);
                     }
                 }
             }
