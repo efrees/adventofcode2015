@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Day7Helpers.cs" />
     <Compile Include="Solutions\Day1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Solutions\Day2.cs" />
     <Compile Include="Solutions\Day5.cs" />
     <Compile Include="Solutions\Day6.cs" />
+    <Compile Include="Solutions\Day7.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -61,6 +63,8 @@
     <Content Include="Inputs\Day3input.txt" />
     <Content Include="Inputs\Day4input.txt" />
     <Content Include="Inputs\Day5input.txt" />
+    <Content Include="Inputs\Day7input_simple.txt" />
+    <Content Include="Inputs\Day7input.txt" />
     <Content Include="Inputs\Day6input.txt" />
   </ItemGroup>
   <ItemGroup />
