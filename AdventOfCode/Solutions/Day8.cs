@@ -15,8 +15,7 @@ namespace AdventOfCode.Solutions
         {
             return new FileInfo("..\\..\\Inputs\\Day8input.txt");
         }
-
-        /// <param name="problemNum">must be zero-based indication of problem</param>
+        
         public static void ProcessInput(StreamReader inputReader)
         {
             var totalCodeChars = 0;
