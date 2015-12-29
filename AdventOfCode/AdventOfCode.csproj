@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Day7Helpers.cs" />
+    <Compile Include="Solutions\Day12.cs" />
     <Compile Include="Solutions\Day11.cs" />
     <Compile Include="Solutions\Day1.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +66,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inputs\Day12input.txt" />
     <Content Include="Inputs\Day11input.txt" />
     <Content Include="Inputs\Day1input.txt" />
     <Content Include="Inputs\Day2input.txt" />
