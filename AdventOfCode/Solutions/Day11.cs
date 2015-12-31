@@ -18,10 +18,6 @@ namespace AdventOfCode.Solutions
 
         public static void ProcessInput(StreamReader inputReader)
         {
-            var totalCodeChars = 0;
-            var totalMemoryChars = 0;
-            var totalEncodedChars = 0;
-
             string inputLine = inputReader.ReadLine();
 
             //Input has 8 characters. Unless there is already a pair or a straight in the first four characters,
@@ -35,8 +31,6 @@ namespace AdventOfCode.Solutions
             nextPassword = GetNextPassword(nextPassword);
 
             Console.WriteLine("Next password (2): " + nextPassword);
-
-            //Console.WriteLine("Difference between encoded and original chars: " + (totalEncodedChars - totalCodeChars));
         }
 
         private static string GetNextPassword(string inputLine)
