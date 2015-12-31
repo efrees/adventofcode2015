@@ -12,7 +12,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            var fileInfo = Day13.GetInputFileInfo();
+            var fileInfo = Day14.GetInputFileInfo();
 
             if (File.Exists(fileInfo.FullName))
             {
@@ -20,7 +20,7 @@ namespace AdventOfCode
                 {
                     using (var fileReader = new StreamReader(fileStream))
                     {
-                        Day13.ProcessInput(fileReader);
+                        Day14.ProcessInput(fileReader);
                     }
                 }
             }

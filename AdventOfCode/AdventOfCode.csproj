@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Day7Helpers.cs" />
+    <Compile Include="Solutions\Day14.cs" />
     <Compile Include="Solutions\Day13.cs" />
     <Compile Include="Solutions\Day12.cs" />
     <Compile Include="Solutions\Day11.cs" />
@@ -67,6 +68,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inputs\Day14input.txt" />
     <Content Include="Inputs\Day13input.txt" />
     <Content Include="Inputs\Day12input.txt" />
     <Content Include="Inputs\Day11input.txt" />
