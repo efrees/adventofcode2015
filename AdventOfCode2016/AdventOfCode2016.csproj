@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlockLocation.cs" />
-    <Compile Include="Direction.cs" />
+    <Compile Include="Solvers\BlockLocation.cs" />
+    <Compile Include="Solvers\Day1Solver.cs" />
+    <Compile Include="Solvers\Direction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,7 +54,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="InputFiles\day1input_small.txt">
+    <Content Include="InputFiles\day1input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

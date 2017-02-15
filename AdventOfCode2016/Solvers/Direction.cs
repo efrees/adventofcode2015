@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016
+﻿namespace AdventOfCode2016.Solvers
 {
     internal class Direction
     {

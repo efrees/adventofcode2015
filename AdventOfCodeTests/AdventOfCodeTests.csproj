@@ -50,8 +50,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Any.cs" />
     <Compile Include="BlockLocation_should_.cs" />
-    <Compile Include="Day1Program_should_.cs" />
+    <Compile Include="Day1Solver_should_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +63,9 @@
       <Project>{FA2F50FB-5C0C-4A19-A4EC-2C101AEAF814}</Project>
       <Name>AdventOfCode2016</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Solvers\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

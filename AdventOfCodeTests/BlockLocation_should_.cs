@@ -1,13 +1,10 @@
-﻿using System;
-using AdventOfCode2016;
+﻿using AdventOfCode2016.Solvers;
 using NUnit.Framework;
 
 namespace AdventOfCodeTests
 {
     internal class BlockLocation_should_
     {
-        private static Random _random = new Random();
-
         [Test]
         public void correctly_handle_movement()
         {
