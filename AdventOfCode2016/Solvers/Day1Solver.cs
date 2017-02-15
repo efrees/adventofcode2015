@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace AdventOfCode2016.Solvers
@@ -8,6 +7,7 @@ namespace AdventOfCode2016.Solvers
     public class Day1Solver
     {
         private static HashSet<Tuple<int, int>> _visitedLocations = new HashSet<Tuple<int, int>>();
+        public static bool EnablePart2Rule { get; set; } = true;
 
         public static int GetSolution(string fileText)
         {
@@ -36,11 +36,11 @@ namespace AdventOfCode2016.Solvers
                     ? currentDirection.GetRightTurnDirection()
                     : currentDirection.GetLeftTurnDirection();
 
-                var distance = int.Parse(instruction.Substring(1));
+                var distance = Int32.Parse(instruction.Substring(1));
                 var previousLocation = currentLocation;
                 currentLocation = currentLocation.Move(currentDirection.GetMovement(distance));
 
-                if (Program.EnablePart2Rule)
+                if (EnablePart2Rule)
                 {
                     var earlyMatch = LogAndCheckForPart2(previousLocation, currentDirection, distance);
 

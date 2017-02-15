@@ -6,8 +6,6 @@ namespace AdventOfCode2016
 {
     public class Program
     {
-        public static bool EnablePart2Rule { get; set; } = false;
-
         static void Main(string[] args)
         {
             var fileText = GetInputFromFile("day1input.txt");

@@ -1,5 +1,4 @@
-﻿using AdventOfCode2016;
-using AdventOfCode2016.Solvers;
+﻿using AdventOfCode2016.Solvers;
 using NUnit.Framework;
 
 namespace AdventOfCodeTests
@@ -49,7 +48,7 @@ namespace AdventOfCodeTests
         [Test]
         public void log_visited_location_when_moving_if_part_2_is_enabled()
         {
-            Program.EnablePart2Rule = true;
+            Day1Solver.EnablePart2Rule = true;
 
             var firstStop = new BlockLocation(2, 0);
             var secondStop = new BlockLocation(2, 4);
@@ -65,7 +64,7 @@ namespace AdventOfCodeTests
         [Test]
         public void log_intermediate_block_locations_when_moving_if_part_2_is_enabled()
         {
-            Program.EnablePart2Rule = true;
+            Day1Solver.EnablePart2Rule = true;
 
             var instructions = new[] { "R2" };
 
@@ -78,7 +77,7 @@ namespace AdventOfCodeTests
         [Test]
         public void return_first_location_visited_twice_if_movements_intersect_and_part_2_is_enabled()
         {
-            Program.EnablePart2Rule = true;
+            Day1Solver.EnablePart2Rule = true;
 
             var instructions = new[] { "R8", "R4", "R4", "R8" };
 
@@ -91,7 +90,7 @@ namespace AdventOfCodeTests
         [Test]
         public void return_first_location_visited_twice_if_looping_to_start()
         {
-            Program.EnablePart2Rule = true;
+            Day1Solver.EnablePart2Rule = true;
 
             var instructions = new[] { "L4", "L4", "L4", "L4", "R11" };
 
