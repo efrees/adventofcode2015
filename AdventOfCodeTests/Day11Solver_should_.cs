@@ -12,8 +12,8 @@ namespace AdventOfCodeTests
                 "The first floor contains a strontium generator, a strontium-compatible microchip, a plutonium generator, and a plutonium-compatible microchip.\n"
                 + "Second floor...\nThird floor...\nFourth floor";
 
-            var day2Solver = new Day11Solver();
-            day2Solver.GetSolution(inputLine);
+            var day11Solver = new Day11Solver();
+            day11Solver.GetSolution(inputLine);
 
             var expectedGenerator = new Day11Component
             {
@@ -27,9 +27,9 @@ namespace AdventOfCodeTests
                 Element = "plutonium"
             };
 
-            Assert.IsNotNull(day2Solver.ParsedComponentsByFloor);
-            Assert.IsTrue(day2Solver.ParsedComponentsByFloor[0].Contains(expectedGenerator), "Parsed input contains expected generator");
-            Assert.IsTrue(day2Solver.ParsedComponentsByFloor[0].Contains(expectedMicrochip), "Parsed input contains expected microchip");
+            Assert.IsNotNull(day11Solver.ParsedComponentsByFloor);
+            Assert.IsTrue(day11Solver.ParsedComponentsByFloor[0].Contains(expectedGenerator), "Parsed input contains expected generator");
+            Assert.IsTrue(day11Solver.ParsedComponentsByFloor[0].Contains(expectedMicrochip), "Parsed input contains expected microchip");
         }
 
         [Test]
@@ -39,8 +39,8 @@ namespace AdventOfCodeTests
                              + "The second floor contains a thulium-compatible microchip.\n"
                              + "Third floor...\nFourth floor";
 
-            var day2Solver = new Day11Solver();
-            day2Solver.GetSolution(inputLines);
+            var day11Solver = new Day11Solver();
+            day11Solver.GetSolution(inputLines);
 
             var expectedGenerator = new Day11Component
             {
@@ -54,9 +54,9 @@ namespace AdventOfCodeTests
                 Element = "thulium"
             };
 
-            Assert.IsNotNull(day2Solver.ParsedComponentsByFloor);
-            Assert.IsTrue(day2Solver.ParsedComponentsByFloor[0].Contains(expectedGenerator), "Parsed input contains expected generator on first row");
-            Assert.IsTrue(day2Solver.ParsedComponentsByFloor[1].Contains(expectedMicrochip), "Parsed input contains expected microchip on second row");
+            Assert.IsNotNull(day11Solver.ParsedComponentsByFloor);
+            Assert.IsTrue(day11Solver.ParsedComponentsByFloor[0].Contains(expectedGenerator), "Parsed input contains expected generator on first row");
+            Assert.IsTrue(day11Solver.ParsedComponentsByFloor[1].Contains(expectedMicrochip), "Parsed input contains expected microchip on second row");
         }
 
         [Test]

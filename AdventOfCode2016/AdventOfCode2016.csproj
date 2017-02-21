@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Solvers\Day11Component.cs" />
+    <Compile Include="Solvers\Day11Part2Solver.cs" />
+    <Compile Include="Solvers\Day11SearchState.cs" />
     <Compile Include="Solvers\Day11Solver.cs" />
     <Compile Include="Solvers\BlockLocation.cs" />
     <Compile Include="Solvers\Day1Solver.cs" />

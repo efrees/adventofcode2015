@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Any.cs" />
     <Compile Include="BlockLocation_should_.cs" />
+    <Compile Include="Day11Part2Solver_should_.cs" />
+    <Compile Include="Day11SearchState_should_.cs" />
     <Compile Include="Day1Solver_should_.cs" />
     <Compile Include="Day11Solver_should_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
