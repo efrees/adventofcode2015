@@ -1,7 +1,7 @@
 ﻿using AdventOfCode2016.Solvers;
 using NUnit.Framework;
 
-namespace AdventOfCodeTests
+namespace AdventOfCodeTests.Solvers
 {
     internal class Day1Solver_should_
     {

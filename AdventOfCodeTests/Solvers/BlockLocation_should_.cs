@@ -1,7 +1,7 @@
 ﻿using AdventOfCode2016.Solvers;
 using NUnit.Framework;
 
-namespace AdventOfCodeTests
+namespace AdventOfCodeTests.Solvers
 {
     internal class BlockLocation_should_
     {
