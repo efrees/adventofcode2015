@@ -58,6 +58,7 @@
     <Compile Include="Solvers\Day11Solver_should_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solvers\Day2Solver_should_.cs" />
+    <Compile Include="Solvers\Day3Solver_should_.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

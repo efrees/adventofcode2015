@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day3Solver.cs" />
     <Compile Include="Solvers\Day11Component.cs" />
     <Compile Include="Solvers\Day11Part2Solver.cs" />
     <Compile Include="Solvers\Day11SearchState.cs" />
@@ -69,6 +70,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day2input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day3input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
