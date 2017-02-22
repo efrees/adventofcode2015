@@ -20,5 +20,13 @@ namespace AdventOfCodeTests.Solvers
             var actualResult = Day3Solver.CreateForPart1().GetSolution(input);
             Assert.AreEqual(2, actualResult);
         }
+
+        [Test]
+        public void interpret_triangles_from_columns_in_part_2()
+        {
+            var input = "3 1 5\n4 2 6\n5 3 7";
+            var actualResult = Day3Solver.CreateForPart2().GetSolution(input);
+            Assert.AreEqual(2, actualResult);
+        }
     }
 }

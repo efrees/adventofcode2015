@@ -1,5 +1,3 @@
-using System.Linq;
-
 namespace AdventOfCode2016.Solvers.Day2Classes
 {
     internal class Day2Part2Keypad : Day2KeyPad
