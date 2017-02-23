@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2016.Solvers
+﻿namespace AdventOfCode2016.Solvers.Day1Classes
 {
     internal class Direction
     {

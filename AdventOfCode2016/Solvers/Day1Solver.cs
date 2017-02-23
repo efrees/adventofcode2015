@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AdventOfCode2016.Solvers.Day1Classes;
 
 namespace AdventOfCode2016.Solvers
 {

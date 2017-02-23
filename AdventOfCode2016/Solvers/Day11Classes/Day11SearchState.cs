@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode2016.Solvers
+namespace AdventOfCode2016.Solvers.Day11Classes
 {
     public class Day11SearchState
     {

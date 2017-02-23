@@ -1,6 +1,6 @@
 using System;
 
-namespace AdventOfCode2016.Solvers
+namespace AdventOfCode2016.Solvers.Day11Classes
 {
     public class Day11Component
     {

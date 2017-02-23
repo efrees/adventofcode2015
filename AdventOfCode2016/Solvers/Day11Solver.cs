@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using AdventOfCode2016.Solvers.Day11Classes;
 
 namespace AdventOfCode2016.Solvers
 {
