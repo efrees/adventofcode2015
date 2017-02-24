@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day5Solver.cs" />
     <Compile Include="Solvers\Day4Solver.cs" />
     <Compile Include="Solvers\Day3Solver.cs" />
     <Compile Include="Solvers\Day11Classes\Day11Component.cs" />
@@ -79,6 +80,9 @@
     </Content>
     <Content Include="InputFiles\day4input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day5input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
