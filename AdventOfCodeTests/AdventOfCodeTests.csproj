@@ -69,6 +69,7 @@
     <Compile Include="Solvers\Day3Solver_should_.cs" />
     <Compile Include="Solvers\Day4Solver_should_.cs" />
     <Compile Include="Solvers\Day5Solver_should_.cs" />
+    <Compile Include="Solvers\Day6Solver_should_.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
