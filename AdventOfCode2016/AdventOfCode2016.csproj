@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day7Solver.cs" />
     <Compile Include="Solvers\Day6Solver.cs" />
     <Compile Include="Solvers\Day5Solver.cs" />
     <Compile Include="Solvers\Day4Solver.cs" />
@@ -87,6 +88,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day6input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day7input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
