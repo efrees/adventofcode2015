@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day12Classes\CopyInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\AssemblyProgramExecutionState.cs" />
+    <Compile Include="Solvers\Day12Solver.cs" />
     <Compile Include="Solvers\Day7Solver.cs" />
     <Compile Include="Solvers\Day6Solver.cs" />
     <Compile Include="Solvers\Day5Solver.cs" />
@@ -61,7 +64,11 @@
     <Compile Include="Solvers\Day1Classes\Direction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solvers\Day12Classes\DecrementInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\IncrementInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\Instruction.cs" />
     <Compile Include="Solvers\SelectCharacterFromCountsStrategy.cs" />
+    <Compile Include="Solvers\UnsupportedInstruction.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +76,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="InputFiles\day12input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="InputFiles\day1input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
