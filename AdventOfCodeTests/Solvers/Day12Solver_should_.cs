@@ -66,5 +66,50 @@ namespace AdventOfCodeTests.Solvers
 
             Assert.AreEqual(expectedValue, actualResult);
         }
+
+        [Test]
+        public void process_jnz_command_when_register_is_not_zero()
+        {
+            var expectedValue = 2;
+            var commandString = $"inc a\njnz a 2\ninc a\ninc a";
+
+            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            Assert.AreEqual(expectedValue, actualResult);
+        }
+
+        [Test]
+        public void process_jnz_command_when_int_operand_is_not_zero()
+        {
+            var expectedValue = 2;
+            var commandString = $"inc a\njnz 1 2\ninc a\ninc a";
+
+            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            Assert.AreEqual(expectedValue, actualResult);
+        }
+
+        [Test]
+        public void process_jnz_command_when_register_is_zero()
+        {
+            var expectedValue = 2;
+            var commandString = "cpy a 0\njnz a 10\ninc a\ninc a";
+            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            Assert.AreEqual(expectedValue, actualResult);
+        }
+
+        [TestCase("cpy 41 a\ninc a\ninc a\ndec a\njnz a 2\ndec a", 42)]
+        public void pass_given_example(string programText, int expectedValue)
+        {
+            var actualResult = Day12Solver.Create().GetSolution(programText);
+            Assert.AreEqual(expectedValue, actualResult);
+        }
+
+        [Test]
+        public void support_registers_a_through_d()
+        {
+            var expectedValue = 11;
+            var programText = "cpy 11 d\ncpy d c\ncpy c b\ncpy b a";
+            var actualResult = Day12Solver.Create().GetSolution(programText);
+            Assert.AreEqual(expectedValue, actualResult);
+        }
     }
 }

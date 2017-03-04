@@ -5,7 +5,7 @@ namespace AdventOfCode2016.Solvers.Day12Classes
 {
     internal class AssemblyProgramExecutionState
     {
-        private readonly char[] _supportedRegisterNames = { 'a', 'b', 'c' };
+        private readonly char[] _supportedRegisterNames = { 'a', 'b', 'c', 'd' };
         private readonly IDictionary<char, int> _registers;
 
         public int NextInstruction { get; set; }

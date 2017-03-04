@@ -17,6 +17,8 @@ internal abstract class Instruction
                 return new IncrementInstruction(operandString);
             case "dec":
                 return new DecrementInstruction(operandString);
+            case "jnz":
+                return new JumpInstruction(operandString);
         }
 
         return new UnsupportedInstruction(rawInstruction);
