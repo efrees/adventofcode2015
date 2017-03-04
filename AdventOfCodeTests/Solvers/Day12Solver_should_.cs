@@ -8,7 +8,7 @@ namespace AdventOfCodeTests.Solvers
         [Test]
         public void create_program_with_lines_of_file()
         {
-            var solver = Day12Solver.Create();
+            var solver = Day12Solver.CreateForPart1();
 
             var expectedLines = "inc a\ninc b\ninc c";
 
@@ -22,7 +22,7 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = 918;
             var commandString = $"cpy {expectedValue} a";
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
 
             Assert.AreEqual(expectedValue, actualResult);
         }
@@ -32,7 +32,7 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = 918;
             var commandString = $"cpy {expectedValue} b\ncpy b a";
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
 
             Assert.AreEqual(expectedValue, actualResult);
         }
@@ -42,7 +42,7 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = 918;
             var commandString = $"cpy 1 a\ncpy 2 a\ncpy {expectedValue} a";
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
 
             Assert.AreEqual(expectedValue, actualResult);
         }
@@ -52,7 +52,7 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = 3;
             var commandString = $"inc a\ninc a\ninc a";
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
 
             Assert.AreEqual(expectedValue, actualResult);
         }
@@ -62,7 +62,7 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = -3;
             var commandString = $"dec a\ndec a\ndec a";
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
 
             Assert.AreEqual(expectedValue, actualResult);
         }
@@ -73,7 +73,7 @@ namespace AdventOfCodeTests.Solvers
             var expectedValue = 2;
             var commandString = $"inc a\njnz a 2\ninc a\ninc a";
 
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
             Assert.AreEqual(expectedValue, actualResult);
         }
 
@@ -83,7 +83,7 @@ namespace AdventOfCodeTests.Solvers
             var expectedValue = 2;
             var commandString = $"inc a\njnz 1 2\ninc a\ninc a";
 
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
             Assert.AreEqual(expectedValue, actualResult);
         }
 
@@ -92,14 +92,14 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = 2;
             var commandString = "cpy a 0\njnz a 10\ninc a\ninc a";
-            var actualResult = Day12Solver.Create().GetSolution(commandString);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(commandString);
             Assert.AreEqual(expectedValue, actualResult);
         }
 
         [TestCase("cpy 41 a\ninc a\ninc a\ndec a\njnz a 2\ndec a", 42)]
         public void pass_given_example(string programText, int expectedValue)
         {
-            var actualResult = Day12Solver.Create().GetSolution(programText);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(programText);
             Assert.AreEqual(expectedValue, actualResult);
         }
 
@@ -108,7 +108,16 @@ namespace AdventOfCodeTests.Solvers
         {
             var expectedValue = 11;
             var programText = "cpy 11 d\ncpy d c\ncpy c b\ncpy b a";
-            var actualResult = Day12Solver.Create().GetSolution(programText);
+            var actualResult = Day12Solver.CreateForPart1().GetSolution(programText);
+            Assert.AreEqual(expectedValue, actualResult);
+        }
+
+        [Test]
+        public void initialize_register_c_to_1_in_part_2()
+        {
+            var expectedValue = 1;
+            var programText = "cpy c a";
+            var actualResult = Day12Solver.CreateForPart2().GetSolution(programText);
             Assert.AreEqual(expectedValue, actualResult);
         }
     }
