@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using AdventOfCode2016.Solvers.Day8Classes;
 
-namespace AdventOfCode2016
+namespace AdventOfCode2016.Solvers
 {
     internal class Day8Solver
     {

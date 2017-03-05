@@ -72,6 +72,7 @@
     <Compile Include="Solvers\Day5Solver_should_.cs" />
     <Compile Include="Solvers\Day6Solver_should_.cs" />
     <Compile Include="Solvers\Day7Solver_should_.cs" />
+    <Compile Include="Solvers\Day9Solver_should_.cs" />
     <Compile Include="Solvers\RotatableGrid_should_.cs" />
   </ItemGroup>
   <ItemGroup>

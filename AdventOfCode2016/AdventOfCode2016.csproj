@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day8Solver.cs" />
+    <Compile Include="Solvers\Day8Solver.cs" />
+    <Compile Include="Solvers\Day9Solver.cs" />
     <Compile Include="Solvers\Day8Classes\RotatableGrid.cs" />
     <Compile Include="Solvers\Day12Classes\CopyInstruction.cs" />
     <Compile Include="Solvers\Day12Classes\AssemblyProgramExecutionState.cs" />
@@ -70,8 +71,7 @@
     <Compile Include="Solvers\Day12Classes\DecrementInstruction.cs" />
     <Compile Include="Solvers\Day12Classes\IncrementInstruction.cs" />
     <Compile Include="Solvers\Day12Classes\Instruction.cs" />
-    <Compile Include="Solvers\SelectCharacterFromCountsStrategy.cs" />
-    <Compile Include="Solvers\UnsupportedInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\UnsupportedInstruction.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +108,9 @@
     </Content>
     <Content Include="InputFiles\day8input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day9input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
