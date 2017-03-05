@@ -1,19 +1,21 @@
 ﻿using System.Linq;
-using AdventOfCode2016.Solvers.Day12Classes;
 
-internal class IncrementInstruction : Instruction
+namespace AdventOfCode2016.Solvers.Day12Classes
 {
-    private readonly string _operandString;
-
-    public IncrementInstruction(string operandString)
+    internal class IncrementInstruction : Instruction
     {
-        _operandString = operandString;
-    }
+        private readonly string _operandString;
 
-    public override void ExecuteWithCurrentState(AssemblyProgramExecutionState executionState)
-    {
-        var registerOperand = _operandString.First();
-        var currentRegisterValue = executionState.GetRegisterValue(registerOperand);
-        executionState.SetRegisterValue(registerOperand, currentRegisterValue + 1);
+        public IncrementInstruction(string operandString)
+        {
+            _operandString = operandString;
+        }
+
+        public override void ExecuteWithCurrentState(AssemblyProgramExecutionState executionState)
+        {
+            var registerOperand = _operandString.First();
+            var currentRegisterValue = executionState.GetRegisterValue(registerOperand);
+            executionState.SetRegisterValue(registerOperand, currentRegisterValue + 1);
+        }
     }
 }

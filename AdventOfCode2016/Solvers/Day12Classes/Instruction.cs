@@ -1,26 +1,27 @@
-﻿using AdventOfCode2016.Solvers.Day12Classes;
-
-internal abstract class Instruction
+﻿namespace AdventOfCode2016.Solvers.Day12Classes
 {
-    public abstract void ExecuteWithCurrentState(AssemblyProgramExecutionState executionState);
-
-    public static Instruction ParseFromText(string rawInstruction)
+    internal abstract class Instruction
     {
-        var command = rawInstruction.Substring(0, 4).TrimEnd();
-        var operandString = rawInstruction.Substring(4);
+        public abstract void ExecuteWithCurrentState(AssemblyProgramExecutionState executionState);
 
-        switch (command)
+        public static Instruction ParseFromText(string rawInstruction)
         {
-            case "cpy":
-                return new CopyInstruction(operandString);
-            case "inc":
-                return new IncrementInstruction(operandString);
-            case "dec":
-                return new DecrementInstruction(operandString);
-            case "jnz":
-                return new JumpInstruction(operandString);
-        }
+            var command = rawInstruction.Substring(0, 4).TrimEnd();
+            var operandString = rawInstruction.Substring(4);
 
-        return new UnsupportedInstruction(rawInstruction);
+            switch (command)
+            {
+                case "cpy":
+                    return new CopyInstruction(operandString);
+                case "inc":
+                    return new IncrementInstruction(operandString);
+                case "dec":
+                    return new DecrementInstruction(operandString);
+                case "jnz":
+                    return new JumpInstruction(operandString);
+            }
+
+            return new UnsupportedInstruction(rawInstruction);
+        }
     }
 }

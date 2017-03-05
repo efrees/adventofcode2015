@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Day8Solver.cs" />
+    <Compile Include="Solvers\Day8Classes\RotatableGrid.cs" />
     <Compile Include="Solvers\Day12Classes\CopyInstruction.cs" />
     <Compile Include="Solvers\Day12Classes\AssemblyProgramExecutionState.cs" />
     <Compile Include="Solvers\Day12Classes\JumpInstruction.cs" />
@@ -102,6 +104,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day7input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day8input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
