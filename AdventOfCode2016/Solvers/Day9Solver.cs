@@ -4,22 +4,38 @@ namespace AdventOfCode2016.Solvers
 {
     internal class Day9Solver
     {
-        public static Day9Solver Create()
+        public static Day9Solver CreateForPart1()
         {
             return new Day9Solver();
         }
 
-        public int GetSolution(string fileText)
+        public static Day9Solver CreateForPart2()
+        {
+            return new Day9Solver()
+            {
+                ExpandMarkersInDecryptedData = true
+            };
+        }
+
+        public bool ExpandMarkersInDecryptedData { get; set; }
+        private long _expandedFileLength;
+
+        public long GetSolution(string fileText)
         {
             fileText = fileText.Trim();
 
-            var totalCount = 0;
+            return GetSizeOfDecryptedText(fileText);
+        }
+
+        private long GetSizeOfDecryptedText(string fileText)
+        {
+            var calculatedSize = 0L;
             while (fileText.Length > 0)
             {
                 var startOfMarker = fileText.IndexOf('(');
                 if (startOfMarker >= 0)
                 {
-                    totalCount += startOfMarker;
+                    calculatedSize += startOfMarker;
                     fileText = fileText.Substring(startOfMarker + 1);
 
                     var endOfMarker = fileText.IndexOf(')');
@@ -29,9 +45,14 @@ namespace AdventOfCode2016.Solvers
                     fileText = fileText.Substring(endOfMarker + 1);
 
                     var charactersToRepeat = operands[0];
-                    var repeatedSection = fileText.Substring(0, charactersToRepeat);
+                    var numberOfRepeats = operands[1];
 
-                    totalCount += charactersToRepeat * operands[1];
+                    var repeatedSection = fileText.Substring(0, charactersToRepeat);
+                    var lengthFromRepeatedSection = ExpandMarkersInDecryptedData
+                        ? GetSizeOfDecryptedText(repeatedSection)
+                        : repeatedSection.Length;
+
+                    calculatedSize += numberOfRepeats * lengthFromRepeatedSection;
 
                     fileText = fileText.Length > charactersToRepeat
                         ? fileText.Substring(charactersToRepeat)
@@ -39,11 +60,11 @@ namespace AdventOfCode2016.Solvers
                 }
                 else
                 {
-                    totalCount += fileText.Length;
+                    calculatedSize += fileText.Length;
                     fileText = string.Empty;
                 }
             }
-            return totalCount;
+            return calculatedSize;
         }
     }
 }
