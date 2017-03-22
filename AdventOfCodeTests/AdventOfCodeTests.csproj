@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Any.cs" />
     <Compile Include="Solvers\BlockLocation_should_.cs" />
+    <Compile Include="Solvers\Day10Solver_should_.cs" />
     <Compile Include="Solvers\Day11Part2Solver_should_.cs" />
     <Compile Include="Solvers\Day11SearchState_should_.cs" />
     <Compile Include="Solvers\Day12Solver_should_.cs" />

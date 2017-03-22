@@ -1,5 +1,4 @@
 ﻿using System;
-using AdventOfCode2016;
 using AdventOfCode2016.Solvers.Day8Classes;
 using NUnit.Framework;
 

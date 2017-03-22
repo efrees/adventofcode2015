@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day10Classes\BotNetwork.cs" />
+    <Compile Include="Solvers\Day10Classes\BotNetworkNode.cs" />
+    <Compile Include="Solvers\Day10Classes\BotNode.cs" />
+    <Compile Include="Solvers\Day10Solver.cs" />
     <Compile Include="Solvers\Day8Solver.cs" />
     <Compile Include="Solvers\Day9Solver.cs" />
     <Compile Include="Solvers\Day8Classes\RotatableGrid.cs" />
@@ -72,6 +76,8 @@
     <Compile Include="Solvers\Day12Classes\IncrementInstruction.cs" />
     <Compile Include="Solvers\Day12Classes\Instruction.cs" />
     <Compile Include="Solvers\Day12Classes\UnsupportedInstruction.cs" />
+    <Compile Include="Solvers\Day10Classes\OutputNode.cs" />
+    <Compile Include="Solvers\Day10Classes\ValueNode.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +85,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="InputFiles\day10input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="InputFiles\day12input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
