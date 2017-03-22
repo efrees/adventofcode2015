@@ -10,7 +10,7 @@ namespace AdventOfCodeTests.Solvers
         {
             var instruction = "value 5 goes to output 0";
 
-            var solver = Day10Solver.Create();
+            var solver = Day10Solver.CreateForPart1();
             solver.GetSolution(instruction);
 
             Assert.AreEqual(5, solver.GetOutputValue(0));
@@ -26,7 +26,7 @@ bot 1 gives low to output 1 and high to bot 0
 bot 0 gives low to output 2 and high to output 0
 value 2 goes to bot 2";
 
-            var solver = Day10Solver.Create();
+            var solver = Day10Solver.CreateForPart1();
             solver.GetSolution(instructions);
 
             Assert.AreEqual(5, solver.GetOutputValue(0));
@@ -44,7 +44,7 @@ bot 1 gives low to output 1 and high to bot 0
 bot 0 gives low to output 2 and high to output 0
 value 2 goes to bot 2";
 
-            var solver = Day10Solver.Create();
+            var solver = Day10Solver.CreateForPart1();
             solver.GetSolution(instructions);
 
             Assert.AreEqual(2, solver.BotNetwork.FindBotThatDidComparison(5, 2));
