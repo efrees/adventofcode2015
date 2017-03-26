@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AdventOfCode2016.Searchers;
 
 namespace AdventOfCodeTests
 {
@@ -16,9 +19,31 @@ namespace AdventOfCodeTests
             return Boolean() ? 'L' : 'R';
         }
 
+        public static CartesianNode CartesianNode()
+        {
+            return new CartesianNode(IntBetween(0, 100), IntBetween(0, 100));
+        }
+
+        public static int Integer()
+        {
+            return _random.Next();
+        }
+
+        public static int IntBetween(int min, int max)
+        {
+            return _random.Next(min, max+1);
+        }
+
         public static int MovementDistance()
         {
-            return _random.Next(1, 1000);
+            return IntBetween(1, 1000);
+        }
+
+        public static IList<T> ListOf<T>(Func<T> generator, int length)
+        {
+            return Enumerable.Range(1, length)
+                .Select(i => generator())
+                .ToList();
         }
     }
 }

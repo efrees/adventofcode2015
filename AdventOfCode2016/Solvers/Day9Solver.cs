@@ -18,7 +18,6 @@ namespace AdventOfCode2016.Solvers
         }
 
         public bool ExpandMarkersInDecryptedData { get; set; }
-        private long _expandedFileLength;
 
         public long GetSolution(string fileText)
         {

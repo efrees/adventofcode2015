@@ -27,9 +27,6 @@ namespace AdventOfCode2016.Solvers
 
         private Func<int> _getAnswerAfterProcessing = () => -1;
 
-        private int _firstValueOfInterest = 61;
-        private int _secondValueOfInterest = 17;
-
         public int GetSolution(string fileText)
         {
             BotNetwork = BotNetwork.CreateFromInstructions(fileText.SplitIntoLines());

@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Searchers\BreadthFirstSearcher.cs" />
+    <Compile Include="Searchers\CartesianNode.cs" />
+    <Compile Include="Searchers\SearchNode.cs" />
+    <Compile Include="Solvers\Day13Classes\Day13CartesianNode.cs" />
+    <Compile Include="Solvers\Day13Solver.cs" />
     <Compile Include="Solvers\Day10Classes\BotNetwork.cs" />
     <Compile Include="Solvers\Day10Classes\BotNetworkNode.cs" />
     <Compile Include="Solvers\Day10Classes\BotNode.cs" />
