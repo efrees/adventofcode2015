@@ -63,12 +63,14 @@
     <Compile Include="Searchers\CartesianNode_should_.cs" />
     <Compile Include="Searchers\SearchNode_should_.cs" />
     <Compile Include="Solvers\BlockLocation_should_.cs" />
+    <Compile Include="Solvers\BufferedKeyQualifier_should_.cs" />
     <Compile Include="Solvers\Day10Solver_should_.cs" />
     <Compile Include="Solvers\Day11Part2Solver_should_.cs" />
     <Compile Include="Solvers\Day11SearchState_should_.cs" />
     <Compile Include="Solvers\Day12Solver_should_.cs" />
     <Compile Include="Solvers\Day13CartesianNode_should_.cs" />
     <Compile Include="Solvers\Day13Solver_should_.cs" />
+    <Compile Include="Solvers\Day14Solver_should_.cs" />
     <Compile Include="Solvers\Day1Solver_should_.cs" />
     <Compile Include="Solvers\Day11Solver_should_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Solvers\Day6Solver_should_.cs" />
     <Compile Include="Solvers\Day7Solver_should_.cs" />
     <Compile Include="Solvers\Day9Solver_should_.cs" />
+    <Compile Include="Solvers\Md5Hasher_should_.cs" />
     <Compile Include="Solvers\RotatableGrid_should_.cs" />
   </ItemGroup>
   <ItemGroup>

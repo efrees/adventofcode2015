@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day14Classes\BufferedKeyQualifier.cs" />
+    <Compile Include="Solvers\Day14Solver.cs" />
     <Compile Include="Searchers\BreadthFirstSearcher.cs" />
     <Compile Include="Searchers\CartesianNode.cs" />
     <Compile Include="Searchers\SearchNode.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Solvers\Day12Classes\UnsupportedInstruction.cs" />
     <Compile Include="Solvers\Day10Classes\OutputNode.cs" />
     <Compile Include="Solvers\Day10Classes\ValueNode.cs" />
+    <Compile Include="Solvers\Md5Hasher.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

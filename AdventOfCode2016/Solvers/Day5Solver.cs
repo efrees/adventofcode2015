@@ -9,7 +9,7 @@ namespace AdventOfCode2016.Solvers
     internal abstract class Day5Solver
     {
         protected const int PasswordLength = 8;
-        private readonly MD5 _hashFunction = MD5.Create();
+        private readonly Md5Hasher _md5Hasher = new Md5Hasher();
 
         public static Day5Solver CreateForPart1()
         {
@@ -29,7 +29,7 @@ namespace AdventOfCode2016.Solvers
             while (PasswordIsNotComplete())
             {
                 var testData = inputLine + nextIntegerToTry;
-                var hashedData = HashDataAsHexString(testData);
+                var hashedData = _md5Hasher.HashDataAsHexString(testData);
                 if (HashIsInteresting(hashedData))
                 {
                     AppendToPasswordFromHash(hashedData);
@@ -46,15 +46,6 @@ namespace AdventOfCode2016.Solvers
         protected abstract void AppendToPasswordFromHash(string hashedData);
         protected abstract string GetCompletedPassword();
 
-        private string HashDataAsHexString(string testData)
-        {
-            _hashFunction.Initialize();
-            var hashBytes = _hashFunction.ComputeHash(Encoding.UTF8.GetBytes(testData));
-
-            return BitConverter.ToString(hashBytes, 0, 4)
-                .Replace("-", string.Empty);
-        }
-
         protected virtual bool HashIsInteresting(string hashedData)
         {
             return hashedData.StartsWith("00000");
@@ -67,7 +58,7 @@ namespace AdventOfCode2016.Solvers
 
         protected override bool PasswordIsNotComplete()
         {
-            return _stringBuilder.Length < PasswordLength;
+            return _stringBuilder.Length < Day5Solver.PasswordLength;
         }
 
         protected override void AppendToPasswordFromHash(string hashedData)
@@ -83,7 +74,7 @@ namespace AdventOfCode2016.Solvers
 
     internal class Day5Part2Solver : Day5Solver
     {
-        private readonly char[] _passwordScratch = Enumerable.Repeat('*', PasswordLength).ToArray();
+        private readonly char[] _passwordScratch = Enumerable.Repeat('*', Day5Solver.PasswordLength).ToArray();
 
         protected override bool PasswordIsNotComplete()
         {
