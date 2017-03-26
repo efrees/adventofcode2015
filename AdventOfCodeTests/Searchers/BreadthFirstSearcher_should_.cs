@@ -130,6 +130,26 @@ namespace AdventOfCodeTests.Searchers
             CollectionAssert.AreEqual(new[] { unprocessedNode }, pathTraversedToUnprocessedNode,
                 "Not having any parent set confirms the parent, duplicateStartNode, was never visited.");
         }
+
+        [Test]
+        public void not_visit_node_beyond_depth_limit()
+        {
+            var targetNode = new TestNode();
+            var middleNode = new TestNode
+            {
+                ChildNodes = new[] { targetNode }
+            };
+            var startNode = new TestNode
+            {
+                ChildNodes = new[] { middleNode }
+            };
+
+            var searcher = new BreadthFirstSearcher<TestNode>(startNode, 1);
+            var actualResult = searcher.GetShortestPathToNode(targetNode);
+
+            CollectionAssert.IsEmpty(actualResult, "Search should not be successful.");
+            Assert.AreEqual(2, searcher.VisitedNodes.Count(), "Only two nodes should have been reached.");
+        }
     }
 
     internal class TestNode : SearchNode<TestNode>

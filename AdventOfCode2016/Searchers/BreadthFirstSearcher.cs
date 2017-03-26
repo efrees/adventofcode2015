@@ -5,13 +5,20 @@ namespace AdventOfCode2016.Searchers
 {
     internal class BreadthFirstSearcher<T> where T : SearchNode<T>
     {
-        public T StartNode { get; private set; }
+        public T StartNode { get; }
+        public int DepthLimit { get; }
         public Queue<T> SearchQueue { get; } = new Queue<T>();
-        public ISet<T> VisitedNodes = new HashSet<T>();
+        public virtual ISet<T> VisitedNodes { get; } = new HashSet<T>();
 
         public BreadthFirstSearcher(T startNode)
         {
             StartNode = startNode;
+        }
+
+        public BreadthFirstSearcher(T startNode, int depthLimit)
+        {
+            StartNode = startNode;
+            DepthLimit = depthLimit;
         }
 
         public virtual IList<T> GetShortestPathToNode(T targetNode)
@@ -24,6 +31,9 @@ namespace AdventOfCode2016.Searchers
 
                 if (VisitedNodes.Contains(currentNode))
                     continue;
+
+                if (NodeIsBeyondDepthLimit(currentNode))
+                    break;
 
                 VisitedNodes.Add(currentNode);
 
@@ -42,6 +52,16 @@ namespace AdventOfCode2016.Searchers
             }
 
             return new List<T>();
+        }
+
+        private bool NodeIsBeyondDepthLimit(T currentNode)
+        {
+            if (DepthLimit == 0)
+                return false;
+
+            //TODO: opportunity for significant optimization.
+            var path = currentNode.GetPathToHere();
+            return path.Count > DepthLimit + 1;
         }
     }
 }

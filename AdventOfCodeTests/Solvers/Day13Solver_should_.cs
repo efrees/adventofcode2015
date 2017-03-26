@@ -1,6 +1,9 @@
-﻿using AdventOfCode2016;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AdventOfCode2016;
 using AdventOfCode2016.Searchers;
 using AdventOfCode2016.Solvers.Day13Classes;
+using AdventOfCodeTests.Searchers;
 using Moq;
 using NUnit.Framework;
 
@@ -28,10 +31,32 @@ namespace AdventOfCodeTests.Solvers
             mockSearcher.Setup(s => s.GetShortestPathToNode(It.Is<CartesianNode>(n => n.X == 31 && n.Y == 39)))
                 .Returns(pathWithExpectedLength);
 
-            var solver = new Day13Solver(mockSearcher.Object);
+            var solver = new Day13Part1Solver(mockSearcher.Object);
             var actualLength = solver.GetSolution();
 
             Assert.AreEqual(expectedStepCount, actualLength);
+        }
+
+        [Test]
+        public void return_total_visited_node_count_in_part_2()
+        {
+            var expectedCount = Any.IntBetween(1, 100);
+            var setWithExpectedCount = new HashSet<CartesianNode>();
+            Enumerable.Range(1, expectedCount)
+                .Select(x => new CartesianNode(x, 1))
+                .ToList()
+                .ForEach(node =>
+                {
+                    setWithExpectedCount.Add(node);
+                });
+
+            var mockSearcher = new Mock<BreadthFirstSearcher<CartesianNode>>(Any.CartesianNode());
+            mockSearcher.Setup(s => s.VisitedNodes).Returns(setWithExpectedCount);
+
+            var solver = new Day13Part2Solver(mockSearcher.Object);
+            var actualCount = solver.GetSolution();
+
+            Assert.AreEqual(expectedCount, actualCount);
         }
     }
 }
