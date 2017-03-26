@@ -19,7 +19,7 @@ namespace AdventOfCodeTests.Solvers
                 .Select(md5Hasher.HashDataAsHexString)
                 .Select(s => s.ToLower());
 
-            var solver = Day14Solver.Create();
+            var solver = Day14Solver.CreateForPart1();
             var actualSequence = solver.KeyQualifier.SequenceGenerator.Take(3).ToList();
 
             CollectionAssert.AreEqual(expectedSequence, actualSequence);
@@ -52,9 +52,23 @@ namespace AdventOfCodeTests.Solvers
         [Test]
         public void solve_example_case_correctly()
         {
-            var solver = Day14Solver.CreateForExample();
+            var solver = Day14Solver.CreateForPart1Example();
             var actualSolution = solver.GetSolution();
             Assert.AreEqual(22728, actualSolution);
+        }
+
+        [Test]
+        public void stretch_keys_correctly_for_part_2()
+        {
+            var salt = "abc";
+            var sequence = Day14Solver.GetSequence(salt, new Md5Hasher());
+            sequence = Day14Solver.GetKeyStretchedSequence(sequence, new Md5Hasher());
+            var qualifier = new BufferedKeyQualifier(sequence);
+
+            var firstKeys = qualifier.GetQualifiedKeyStream().Take(3).ToList();
+
+            Assert.AreEqual(10, firstKeys[0].Item1);
+            Assert.AreEqual(25, firstKeys[1].Item1);
         }
     }
 }
