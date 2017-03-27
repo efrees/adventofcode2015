@@ -71,6 +71,8 @@
     <Compile Include="Solvers\Day13CartesianNode_should_.cs" />
     <Compile Include="Solvers\Day13Solver_should_.cs" />
     <Compile Include="Solvers\Day14Solver_should_.cs" />
+    <Compile Include="Solvers\Day15Solver_should_.cs" />
+    <Compile Include="Solvers\RingDefinition_should_.cs" />
     <Compile Include="Solvers\Day1Solver_should_.cs" />
     <Compile Include="Solvers\Day11Solver_should_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

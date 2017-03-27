@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day15Classes\RingDefinition.cs" />
+    <Compile Include="Solvers\Day15Solver.cs" />
     <Compile Include="Solvers\Day14Classes\BufferedKeyQualifier.cs" />
     <Compile Include="Solvers\Day14Solver.cs" />
     <Compile Include="Searchers\BreadthFirstSearcher.cs" />
@@ -97,6 +99,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day12input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day15input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day1input.txt">
