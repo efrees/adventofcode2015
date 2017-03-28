@@ -9,7 +9,7 @@ namespace AdventOfCode2016
         static void Main(string[] args)
         {
             //var fileText = GetInputFromFile("day15input.txt");
-            var result = Day16Solver.CreateForPart1().GetSolution();
+            var result = Day16Solver.CreateForPart2().GetSolution();
 
             Console.WriteLine(result);
             Console.ReadKey();
