@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day16Classes\Day16ChecksumCreator.cs" />
+    <Compile Include="Solvers\Day16Classes\Day16DataGenerator.cs" />
+    <Compile Include="Solvers\Day16Solver.cs" />
     <Compile Include="Solvers\Day15Classes\RingDefinition.cs" />
     <Compile Include="Solvers\Day15Solver.cs" />
     <Compile Include="Solvers\Day14Classes\BufferedKeyQualifier.cs" />
