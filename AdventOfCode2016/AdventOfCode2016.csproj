@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day24Solver.cs" />
     <Compile Include="Solvers\Day16Classes\Day16ChecksumCreator.cs" />
     <Compile Include="Solvers\Day16Classes\Day16DataGenerator.cs" />
     <Compile Include="Solvers\Day16Solver.cs" />
@@ -59,6 +60,9 @@
     <Compile Include="Solvers\Day10Classes\BotNetworkNode.cs" />
     <Compile Include="Solvers\Day10Classes\BotNode.cs" />
     <Compile Include="Solvers\Day10Solver.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24InputGridNode.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24Graph.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24Node.cs" />
     <Compile Include="Solvers\Day8Solver.cs" />
     <Compile Include="Solvers\Day9Solver.cs" />
     <Compile Include="Solvers\Day8Classes\RotatableGrid.cs" />
@@ -111,6 +115,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day11input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day24input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day2input.txt">

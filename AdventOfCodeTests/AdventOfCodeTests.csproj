@@ -75,6 +75,7 @@
     <Compile Include="Solvers\Day16Classes\Day16ChecksumCreator_should_.cs" />
     <Compile Include="Solvers\Day16Classes\Day16DataGenerator_should_.cs" />
     <Compile Include="Solvers\Day16Solver_should_.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24Graph_should_.cs" />
     <Compile Include="Solvers\RingDefinition_should_.cs" />
     <Compile Include="Solvers\Day1Solver_should_.cs" />
     <Compile Include="Solvers\Day11Solver_should_.cs" />
