@@ -3,7 +3,6 @@ using System.Linq;
 using AdventOfCode2016;
 using AdventOfCode2016.Searchers;
 using AdventOfCode2016.Solvers.Day13Classes;
-using AdventOfCodeTests.Searchers;
 using Moq;
 using NUnit.Framework;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using AdventOfCode2016.Solvers.Day24Classes;
+﻿using AdventOfCode2016.Solvers.Day24Classes;
 
 namespace AdventOfCode2016.Solvers
 {

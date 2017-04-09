@@ -1,4 +1,3 @@
-using System;
 using AdventOfCode2016.Searchers;
 using AdventOfCode2016.Solvers.Day13Classes;
 
