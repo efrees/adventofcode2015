@@ -10,9 +10,12 @@ namespace AdventOfCode2016.Searchers
 
         public abstract IEnumerable<T> GetChildren();
 
-        public void StoreParentNode(T parentNode)
+        public int LengthOfPathToHere { get; private set; } = 1;
+
+        public virtual void StoreParentNode(T parentNode)
         {
             _parentNode = parentNode;
+            LengthOfPathToHere = parentNode.LengthOfPathToHere + 1;
         }
 
         public IList<T> GetPathToHere()

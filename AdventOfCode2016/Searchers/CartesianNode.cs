@@ -24,7 +24,7 @@ namespace AdventOfCode2016.Searchers
                 new CartesianNode(X, Y+1)
             };
         }
-
+        
         public override bool Equals(object obj)
         {
             var other = obj as CartesianNode;

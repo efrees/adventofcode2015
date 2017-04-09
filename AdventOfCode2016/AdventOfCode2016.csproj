@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Priority Queue, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OptimizedPriorityQueue.4.0.4\lib\net45\Priority Queue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Day17Solver.cs" />
+    <Compile Include="Searchers\AStarSearcher.cs" />
+    <Compile Include="Searchers\ISearchHeuristic.cs" />
+    <Compile Include="Solvers\Day17Classes\Day17PathFormatter.cs" />
+    <Compile Include="Solvers\Day17Classes\Day17SearchNode.cs" />
     <Compile Include="Solvers\Day24Solver.cs" />
     <Compile Include="Solvers\Day16Classes\Day16ChecksumCreator.cs" />
     <Compile Include="Solvers\Day16Classes\Day16DataGenerator.cs" />
@@ -99,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
