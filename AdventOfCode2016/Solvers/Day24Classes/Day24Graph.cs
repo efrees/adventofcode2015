@@ -86,16 +86,33 @@ namespace AdventOfCode2016.Solvers.Day24Classes
             return sum;
         }
 
+        public IList<Day24Node> GetBestOrderToTourAllNodes()
+        {
+            var unvisitedNodes = Nodes.ToList();
+
+            var startNode = unvisitedNodes.First(n => n.Identifier == 0);
+
+            Func<IList<Day24Node>, int> getCostForTour = pathOrder =>
+            {
+                var distanceToFinishTour = DistanceBetween(pathOrder.Last().Identifier, startNode.Identifier);
+                return GetCostOfPath(pathOrder) + distanceToFinishTour;
+            };
+
+            var order = GetBestOrderToVisitAllNodesFromStartNode(Nodes, startNode, getCostForTour);
+            order.Add(startNode);
+            return order;
+        }
+        
         public IList<Day24Node> GetBestOrderToVisitAllNodesFromZero()
         {
             var unvisitedNodes = Nodes.ToList();
 
             var startNode = unvisitedNodes.First(n => n.Identifier == 0);
 
-            return GetBestOrderToVisitAllNodesStartingWith(Nodes, startNode);
+            return GetBestOrderToVisitAllNodesFromStartNode(Nodes, startNode, GetCostOfPath);
         }
 
-        private IList<Day24Node> GetBestOrderToVisitAllNodesStartingWith(IList<Day24Node> nodes, Day24Node startNode)
+        private IList<Day24Node> GetBestOrderToVisitAllNodesFromStartNode(IList<Day24Node> nodes, Day24Node startNode, Func<IList<Day24Node>, int> pathCostFunction)
         {
             if (nodes.Count == 1)
             {
@@ -109,10 +126,10 @@ namespace AdventOfCode2016.Solvers.Day24Classes
 
             foreach (var possibleNextNode in remainingNodes)
             {
-                var orderOfRemainingNodes = GetBestOrderToVisitAllNodesStartingWith(remainingNodes, possibleNextNode);
+                var orderOfRemainingNodes = GetBestOrderToVisitAllNodesFromStartNode(remainingNodes, possibleNextNode, pathCostFunction);
                 orderOfRemainingNodes.Insert(0, startNode);
 
-                var costForOrder = GetCostOfPath(orderOfRemainingNodes);
+                var costForOrder = pathCostFunction(orderOfRemainingNodes);
 
                 if (costForOrder < minCost)
                 {
