@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Day17Solver.cs" />
     <Compile Include="Searchers\AStarSearcher.cs" />
+    <Compile Include="Searchers\ExhaustiveSearcher.cs" />
     <Compile Include="Searchers\ISearchHeuristic.cs" />
     <Compile Include="Solvers\Day17Classes\Day17PathFormatter.cs" />
     <Compile Include="Solvers\Day17Classes\Day17SearchNode.cs" />
