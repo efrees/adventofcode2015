@@ -10,9 +10,14 @@ namespace AdventOfCode2016.Solvers
         private readonly Day18RowGenerator _day18RowGenerator;
         private readonly int _targetRowCount;
 
-        public static Day18Solver Create()
+        public static Day18Solver CreateForPart1()
         {
             return new Day18Solver(new Day18RowGenerator(), 40);
+        }
+
+        public static Day18Solver CreateForPart2()
+        {
+            return new Day18Solver(new Day18RowGenerator(), 400000);
         }
 
         internal Day18Solver(Day18RowGenerator day18RowGenerator, int rowCount)
@@ -23,15 +28,15 @@ namespace AdventOfCode2016.Solvers
 
         public int GetSolution(string inputText)
         {
-            var count = 1;
-            var rows = new StringBuilder(inputText);
-            while (count++ < _targetRowCount)
+            var rowCount = 1;
+            var safeTileCount = inputText.Count(TileIsSafe);
+            while (rowCount++ < _targetRowCount)
             {
                 inputText = _day18RowGenerator.GetNextRow(inputText.Trim());
-                rows.Append(inputText);
+                safeTileCount += inputText.Count(TileIsSafe);
             }
 
-            return rows.ToString().Count(TileIsSafe);
+            return safeTileCount;
         }
 
         private static bool TileIsSafe(char c)

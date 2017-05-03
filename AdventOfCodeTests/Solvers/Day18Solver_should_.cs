@@ -13,6 +13,7 @@ namespace AdventOfCodeTests.Solvers
             var expectedInitial = Any.AlphaNumericString();
             var rowCount = 2;
             var mockGenerator = new Mock<Day18RowGenerator>();
+            mockGenerator.Setup(g => g.GetNextRow(It.IsAny<string>())).Returns(Any.AlphaNumericString());
 
             new Day18Solver(mockGenerator.Object, rowCount)
                 .GetSolution(expectedInitial);
@@ -62,7 +63,8 @@ namespace AdventOfCodeTests.Solvers
             var mockGenerator = new Mock<Day18RowGenerator>();
             mockGenerator.SetupSequence(g => g.GetNextRow(It.IsAny<string>()))
                 .Returns(expectedRows[1])
-                .Returns(expectedRows[2]);
+                .Returns(expectedRows[2])
+                .Returns(Any.AlphaNumericString());
 
             var safeTileCount = new Day18Solver(mockGenerator.Object, rowCount)
                 .GetSolution(expectedRows[0]);
