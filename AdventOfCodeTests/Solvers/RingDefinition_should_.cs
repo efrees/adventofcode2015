@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using AdventOfCode2016.Solvers.Day15Classes;
+using NUnit.Framework;
 
 namespace AdventOfCodeTests.Solvers
 {

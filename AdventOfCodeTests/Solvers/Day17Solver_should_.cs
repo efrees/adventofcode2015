@@ -1,4 +1,5 @@
 ﻿using AdventOfCode2016;
+using AdventOfCode2016.Solvers;
 using NUnit.Framework;
 
 namespace AdventOfCodeTests
@@ -14,10 +15,10 @@ namespace AdventOfCodeTests
             Assert.AreEqual(expectedPath, actualPath);
         }
 
-        [TestCase("ihgpwlah", 370)]
-        [TestCase("kglvqrro", 492)]
-        [TestCase("ulqzkmiv", 830)]
-        public void solve_part2_examples_correctly(string inputSalt, int pathLength)
+        [TestCase("ihgpwlah", "370")]
+        [TestCase("kglvqrro", "492")]
+        [TestCase("ulqzkmiv", "830")]
+        public void solve_part2_examples_correctly(string inputSalt, string pathLength)
         {
             var actualPathLength = new Day17Part2Solver(inputSalt).GetSolution();
             Assert.AreEqual(pathLength, actualPathLength);

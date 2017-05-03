@@ -3,7 +3,7 @@ using System.Linq;
 using AdventOfCode2016.Searchers;
 using AdventOfCode2016.Solvers.Day17Classes;
 
-namespace AdventOfCode2016
+namespace AdventOfCode2016.Solvers
 {
     internal abstract class Day17Solver
     {

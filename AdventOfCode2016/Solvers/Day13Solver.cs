@@ -1,7 +1,7 @@
 using AdventOfCode2016.Searchers;
 using AdventOfCode2016.Solvers.Day13Classes;
 
-namespace AdventOfCode2016
+namespace AdventOfCode2016.Solvers
 {
     internal abstract class Day13Solver
     {

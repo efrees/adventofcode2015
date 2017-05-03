@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day17Solver.cs" />
+    <Compile Include="Solvers\Day17Solver.cs" />
+    <Compile Include="Solvers\Day18Solver.cs" />
     <Compile Include="Searchers\AStarSearcher.cs" />
     <Compile Include="Searchers\ExhaustiveSearcher.cs" />
     <Compile Include="Searchers\ISearchHeuristic.cs" />
     <Compile Include="Solvers\Day17Classes\Day17PathFormatter.cs" />
     <Compile Include="Solvers\Day17Classes\Day17SearchNode.cs" />
+    <Compile Include="Solvers\Day18Classes\Day18RowGenerator.cs" />
     <Compile Include="Solvers\Day24Solver.cs" />
     <Compile Include="Solvers\Day16Classes\Day16ChecksumCreator.cs" />
     <Compile Include="Solvers\Day16Classes\Day16DataGenerator.cs" />
@@ -121,6 +123,9 @@
     </Content>
     <Content Include="InputFiles\day15input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day18input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="InputFiles\day1input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

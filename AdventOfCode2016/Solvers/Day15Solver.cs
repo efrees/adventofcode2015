@@ -1,5 +1,5 @@
 using System.Linq;
-using AdventOfCodeTests.Solvers;
+using AdventOfCode2016.Solvers.Day15Classes;
 
 namespace AdventOfCode2016.Solvers
 {

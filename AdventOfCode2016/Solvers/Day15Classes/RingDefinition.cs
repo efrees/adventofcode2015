@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCodeTests.Solvers
+namespace AdventOfCode2016.Solvers.Day15Classes
 {
     internal class RingDefinition
     {
