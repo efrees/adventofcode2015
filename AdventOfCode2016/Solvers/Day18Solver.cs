@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using AdventOfCode2016.Solvers.Day18Classes;
 
 namespace AdventOfCode2016.Solvers

@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solvers\Day19Solver.cs" />
     <Compile Include="Solvers\Day17Solver.cs" />
     <Compile Include="Solvers\Day18Solver.cs" />
     <Compile Include="Searchers\AStarSearcher.cs" />
