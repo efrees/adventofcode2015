@@ -6,12 +6,30 @@ namespace AdventOfCode2016.Solvers
 {
     internal class Day20Solver
     {
-        public static Day20Solver Create()
+        public static Day20Solver CreateForPart1()
         {
-            return new Day20Solver();
+            var day20Solver = new Day20Solver();
+            day20Solver.SolutionFunction = day20Solver.GetLowestAllowedNumber;
+            return day20Solver;
         }
 
+        public static Day20Solver CreateForPart2()
+        {
+            var day20Solver = new Day20Solver();
+            day20Solver.SolutionFunction = day20Solver.GetNonBlacklistedCount;
+            return day20Solver;
+        }
+
+        private Func<uint> SolutionFunction { get; set; }
+
         public uint GetSolution(string fileText)
+        {
+            ProcessInputRanges(fileText);
+
+            return SolutionFunction();
+        }
+
+        private void ProcessInputRanges(string fileText)
         {
             var inputLines = fileText.SplitIntoLines();
             foreach (var line in inputLines)
@@ -20,10 +38,20 @@ namespace AdventOfCode2016.Solvers
             }
 
             SortAndSimplifyBlacklist();
+        }
 
+        private uint GetLowestAllowedNumber()
+        {
             return Enumerable.Range(0, int.MaxValue)
                 .Select(i => (uint)i)
                 .First(IsNotBlacklisted);
+        }
+
+        private uint GetNonBlacklistedCount()
+        {
+            var possibleValuesLessOne = uint.MaxValue;
+            _blacklist.ForEach(bl => possibleValuesLessOne -= bl.End - bl.Start + 1);
+            return possibleValuesLessOne + 1;
         }
 
         private List<Range> _blacklist = new List<Range>();
