@@ -84,5 +84,57 @@ namespace AdventOfCodeTests.Solvers
 
             Assert.AreEqual("acdeb", actualResult);
         }
+
+        [Test]
+        public void reverse_commands_in_part_2()
+        {
+            var input = "swap position 1 with position 2\n" +
+                        "swap position 2 with position 3";
+
+            var actualResult = new Day21Part2Solver("abcde").GetSolution(input);
+
+            Assert.AreEqual("adbce", actualResult);
+        }
+
+        [Test]
+        public void move_in_opposite_direction_in_part_2()
+        {
+            var input = "move position 1 to position 4";
+
+            var actualResult = new Day21Part2Solver("acdeb").GetSolution(input);
+
+            Assert.AreEqual("abcde", actualResult);
+        }
+
+        [Test]
+        public void reverse_rotation_direction_in_part_2()
+        {
+            var input = "rotate right 1 step";
+
+            var actualResult = new Day21Part2Solver("abcde").GetSolution(input);
+
+            Assert.AreEqual("bcdea", actualResult);
+        }
+
+        [Test]
+        public void reverse_rotation_by_position_in_part_2()
+        {
+            var input = "rotate based on position of letter b";
+
+            var actualResult = new Day21Part2Solver("deabc").GetSolution(input);
+
+            Assert.AreEqual("abcde", actualResult);
+        }
+
+        [Test]
+        public void reverse_rotation_based_on_letter_position_at_least_four_on_command()
+        {
+            var input = "rotate based on position of letter e";
+
+            var actualResult = new Day21Part2Solver("cdefghab").GetSolution(input);
+
+            Assert.AreEqual("abcdefgh", actualResult);
+        }
+
     }
 }
