@@ -14,7 +14,7 @@ namespace AdventOfCodeTests.Solvers
 
             solver.GetSolution(expectedLines);
 
-            CollectionAssert.AreEqual(expectedLines.Split('\n'), solver.Program);
+            CollectionAssert.AreEqual(expectedLines.Split('\n'), solver.AssemblyProgramInterpreter.Program);
         }
 
         [Test]

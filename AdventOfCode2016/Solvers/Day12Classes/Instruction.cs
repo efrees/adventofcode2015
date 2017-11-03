@@ -19,6 +19,8 @@
                     return new DecrementInstruction(operandString);
                 case "jnz":
                     return new JumpInstruction(operandString);
+                case "tgl":
+                    return new ToggleInstruction(operandString);
             }
 
             return new UnsupportedInstruction(rawInstruction);

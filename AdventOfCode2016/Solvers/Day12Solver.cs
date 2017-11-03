@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using AdventOfCode2016.Solvers.Day12Classes;
 
 namespace AdventOfCode2016.Solvers
 {
@@ -13,40 +11,23 @@ namespace AdventOfCode2016.Solvers
 
         public static Day12Solver CreateForPart2()
         {
-            var day12Solver = new Day12Solver();
-            day12Solver._initialRegisterValues['c'] = 1;
-            return day12Solver;
+            var initialRegisterValues = new Dictionary<char, int>
+            {
+                { 'c', 1 }
+            };
+            return new Day12Solver(initialRegisterValues);
         }
 
-        private Dictionary<char, int> _initialRegisterValues = new Dictionary<char, int>();
+        internal readonly AssemblyProgramInterpreter AssemblyProgramInterpreter;
+
+        private Day12Solver(Dictionary<char, int> initialRegisterValues = null)
+        {
+            AssemblyProgramInterpreter = new AssemblyProgramInterpreter(initialRegisterValues);
+        }
 
         public int GetSolution(string programText)
         {
-            Program = programText.SplitIntoLines().ToArray();
-            var state = GetInitialExecutionState();
-
-            while (Program.Count > state.NextInstruction)
-            {
-                var rawInstruction = Program[state.NextInstruction];
-                var instruction = Instruction.ParseFromText(rawInstruction);
-                instruction.ExecuteWithCurrentState(state);
-
-                state.NextInstruction++;
-            }
-
-            return state.GetRegisterValue('a');
+            return AssemblyProgramInterpreter.ExecuteAssemblyProgram(programText);
         }
-
-        private AssemblyProgramExecutionState GetInitialExecutionState()
-        {
-            var assemblyProgramExecutionState = new AssemblyProgramExecutionState();
-            foreach (var k in _initialRegisterValues.Keys)
-            {
-                assemblyProgramExecutionState.SetRegisterValue(k, _initialRegisterValues[k]);
-            }
-            return assemblyProgramExecutionState;
-        }
-
-        public IReadOnlyList<string> Program { get; set; }
     }
 }
