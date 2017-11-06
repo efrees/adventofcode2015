@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AdventOfCode2016.Solvers.Day12Classes;
 
 namespace AdventOfCode2016.Solvers
 {

@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AdventOfCode2016.Solvers.Day12Classes;
 
-namespace AdventOfCode2016.Solvers
+namespace AdventOfCode2016.Solvers.Day12Classes
 {
     internal class AssemblyProgramInterpreter
     {
