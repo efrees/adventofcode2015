@@ -1,10 +1,8 @@
-﻿using System.Linq;
-
-namespace AdventOfCode2016.Solvers.Day12Classes
+﻿namespace AdventOfCode2016.Solvers.Day12Classes
 {
     internal class JumpInstruction : Instruction
     {
-        private string _operandString;
+        private readonly string _operandString;
 
         public JumpInstruction(string operandString)
         {
@@ -22,13 +20,6 @@ namespace AdventOfCode2016.Solvers.Day12Classes
                 var op2Value = GetOperandValue(executionState, operands[1]);
                 executionState.NextInstruction += op2Value - 1;
             }
-        }
-
-        private static int GetOperandValue(AssemblyProgramExecutionState executionState, string operandString)
-        {
-            return executionState.HasRegister(operandString)
-                ? executionState.GetRegisterValue(operandString.First())
-                : int.Parse(operandString);
         }
     }
 }

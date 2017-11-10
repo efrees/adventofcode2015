@@ -1,16 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace AdventOfCode2016.Solvers.Day12Classes
 {
     internal class AssemblyProgramInterpreter
     {
+        private readonly Stream _outputStream;
         private readonly Dictionary<char, int> _initialRegisterValues;
         private string[] _program;
 
-        public AssemblyProgramInterpreter(Dictionary<char, int> initialRegisterValues = null)
+        public AssemblyProgramInterpreter(Dictionary<char, int> initialRegisterValues = null, Stream outputStream = null)
         {
             _initialRegisterValues = initialRegisterValues ?? new Dictionary<char, int>();
+            _outputStream = outputStream;
         }
 
         public IReadOnlyList<string> Program => _program;
@@ -22,14 +25,21 @@ namespace AdventOfCode2016.Solvers.Day12Classes
 
             while (Program.Count > state.NextInstruction)
             {
-                var rawInstruction = Program[state.NextInstruction];
-                var instruction = Instruction.ParseFromText(rawInstruction);
-                instruction.ExecuteWithCurrentState(state);
-
-                state.NextInstruction++;
+                ExecuteNextInstruction(state);
             }
 
             return state.GetRegisterValue('a');
+        }
+
+        private void ExecuteNextInstruction(AssemblyProgramExecutionState state)
+        {
+            var rawInstruction = Program[state.NextInstruction];
+            var instruction = Instruction.ParseFromText(rawInstruction);
+
+            (instruction as OutputInstruction)?.AttachOutputStream(_outputStream);
+            instruction.ExecuteWithCurrentState(state);
+
+            state.NextInstruction++;
         }
 
         private AssemblyProgramExecutionState GetInitialExecutionState(IList<string> program)

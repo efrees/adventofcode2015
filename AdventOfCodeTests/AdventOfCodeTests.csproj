@@ -59,6 +59,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Any.cs" />
+    <Compile Include="Solvers\AssemblyProgramInterpreter_should_.cs" />
     <Compile Include="Solvers\Day17SearchNode_should_.cs" />
     <Compile Include="Solvers\Day17Solver_should_.cs" />
     <Compile Include="Searchers\BreadthFirstSearcher_should_.cs" />

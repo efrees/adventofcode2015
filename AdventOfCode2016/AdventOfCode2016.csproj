@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Solvers\Day12Classes\AssemblyProgramInterpreter.cs" />
+    <Compile Include="Solvers\Day12Classes\OutputInstruction.cs" />
     <Compile Include="Solvers\Day12Classes\ToggleInstruction.cs" />
     <Compile Include="Solvers\Day23Solver.cs" />
     <Compile Include="Solvers\Day22Solver.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Solvers\Day24Classes\Day24InputGridNode.cs" />
     <Compile Include="Solvers\Day24Classes\Day24Graph.cs" />
     <Compile Include="Solvers\Day24Classes\Day24Node.cs" />
+    <Compile Include="Solvers\Day25Solver.cs" />
     <Compile Include="Solvers\Day8Solver.cs" />
     <Compile Include="Solvers\Day9Solver.cs" />
     <Compile Include="Solvers\Day8Classes\RotatableGrid.cs" />
