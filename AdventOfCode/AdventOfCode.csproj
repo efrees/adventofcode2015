@@ -77,6 +77,7 @@
     <Content Include="Inputs\Day11input.txt" />
     <Content Include="Inputs\Day15input.txt" />
     <Content Include="Inputs\Day17Input.txt" />
+    <Content Include="Inputs\Day18input.txt" />
     <Content Include="Inputs\Day1input.txt" />
     <Content Include="Inputs\Day2input.txt" />
     <Content Include="Inputs\Day3input.txt" />
