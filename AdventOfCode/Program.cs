@@ -8,7 +8,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            var fileInfo = Day15.GetInputFileInfo();
+            var fileInfo = InputFiles.GetInputFileInfo("Day17");
 
             if (File.Exists(fileInfo.FullName))
             {
@@ -16,7 +16,7 @@ namespace AdventOfCode
                 {
                     using (var fileReader = new StreamReader(fileStream))
                     {
-                        Day15.ProcessInput(fileReader);
+                        Day17.ProcessInput(fileReader);
                     }
                 }
             }
@@ -24,7 +24,7 @@ namespace AdventOfCode
             {
                 Console.WriteLine("File Not Found");
             }
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solutions\Day17.cs" />
     <Compile Include="Helpers\Day7Helpers.cs" />
     <Compile Include="Solutions\Day15.cs" />
     <Compile Include="Solutions\Day14.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Solutions\Day5.cs" />
     <Compile Include="Solutions\Day6.cs" />
     <Compile Include="Solutions\Day7.cs" />
+    <Compile Include="Solutions\InputFiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,9 +75,8 @@
     <Content Include="Inputs\Day13input.txt" />
     <Content Include="Inputs\Day12input.txt" />
     <Content Include="Inputs\Day11input.txt" />
-    <Content Include="Inputs\Day15input.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Inputs\Day15input.txt" />
+    <Content Include="Inputs\Day17Input.txt" />
     <Content Include="Inputs\Day1input.txt" />
     <Content Include="Inputs\Day2input.txt" />
     <Content Include="Inputs\Day3input.txt" />
