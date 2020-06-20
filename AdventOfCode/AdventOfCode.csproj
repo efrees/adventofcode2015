@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solutions\Day19.cs" />
+    <Compile Include="Solutions\Day18.cs" />
     <Compile Include="Solutions\Day17.cs" />
     <Compile Include="Helpers\Day7Helpers.cs" />
     <Compile Include="Solutions\Day15.cs" />
@@ -78,6 +80,7 @@
     <Content Include="Inputs\Day15input.txt" />
     <Content Include="Inputs\Day17Input.txt" />
     <Content Include="Inputs\Day18input.txt" />
+    <Content Include="Inputs\Day19input.txt" />
     <Content Include="Inputs\Day1input.txt" />
     <Content Include="Inputs\Day2input.txt" />
     <Content Include="Inputs\Day3input.txt" />
