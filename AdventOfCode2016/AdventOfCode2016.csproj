@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA2F50FB-5C0C-4A19-A4EC-2C101AEAF814}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdventOfCode2016</RootNamespace>
+    <AssemblyName>AdventOfCode2016</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Priority Queue, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OptimizedPriorityQueue.4.0.4\lib\net45\Priority Queue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Solvers\Day12Classes\AssemblyProgramInterpreter.cs" />
+    <Compile Include="Solvers\Day12Classes\OutputInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\ToggleInstruction.cs" />
+    <Compile Include="Solvers\Day23Solver.cs" />
+    <Compile Include="Solvers\Day22Solver.cs" />
+    <Compile Include="Solvers\Day21Solver.cs" />
+    <Compile Include="Solvers\Day20Solver.cs" />
+    <Compile Include="Solvers\Day19Solver.cs" />
+    <Compile Include="Solvers\Day17Solver.cs" />
+    <Compile Include="Solvers\Day18Solver.cs" />
+    <Compile Include="Searchers\AStarSearcher.cs" />
+    <Compile Include="Searchers\ExhaustiveSearcher.cs" />
+    <Compile Include="Searchers\ISearchHeuristic.cs" />
+    <Compile Include="Solvers\Day17Classes\Day17PathFormatter.cs" />
+    <Compile Include="Solvers\Day17Classes\Day17SearchNode.cs" />
+    <Compile Include="Solvers\Day18Classes\Day18RowGenerator.cs" />
+    <Compile Include="Solvers\Day24Solver.cs" />
+    <Compile Include="Solvers\Day16Classes\Day16ChecksumCreator.cs" />
+    <Compile Include="Solvers\Day16Classes\Day16DataGenerator.cs" />
+    <Compile Include="Solvers\Day16Solver.cs" />
+    <Compile Include="Solvers\Day15Classes\RingDefinition.cs" />
+    <Compile Include="Solvers\Day15Solver.cs" />
+    <Compile Include="Solvers\Day14Classes\BufferedKeyQualifier.cs" />
+    <Compile Include="Solvers\Day14Solver.cs" />
+    <Compile Include="Searchers\BreadthFirstSearcher.cs" />
+    <Compile Include="Searchers\CartesianNode.cs" />
+    <Compile Include="Searchers\SearchNode.cs" />
+    <Compile Include="Solvers\Day13Classes\Day13CartesianNode.cs" />
+    <Compile Include="Solvers\Day13Solver.cs" />
+    <Compile Include="Solvers\Day10Classes\BotNetwork.cs" />
+    <Compile Include="Solvers\Day10Classes\BotNetworkNode.cs" />
+    <Compile Include="Solvers\Day10Classes\BotNode.cs" />
+    <Compile Include="Solvers\Day10Solver.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24InputGridNode.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24Graph.cs" />
+    <Compile Include="Solvers\Day24Classes\Day24Node.cs" />
+    <Compile Include="Solvers\Day25Solver.cs" />
+    <Compile Include="Solvers\Day8Solver.cs" />
+    <Compile Include="Solvers\Day9Solver.cs" />
+    <Compile Include="Solvers\Day8Classes\RotatableGrid.cs" />
+    <Compile Include="Solvers\Day12Classes\CopyInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\AssemblyProgramExecutionState.cs" />
+    <Compile Include="Solvers\Day12Classes\JumpInstruction.cs" />
+    <Compile Include="Solvers\Day12Solver.cs" />
+    <Compile Include="Solvers\Day7Solver.cs" />
+    <Compile Include="Solvers\Day6Solver.cs" />
+    <Compile Include="Solvers\Day5Solver.cs" />
+    <Compile Include="Solvers\Day4Solver.cs" />
+    <Compile Include="Solvers\Day3Solver.cs" />
+    <Compile Include="Solvers\Day11Classes\Day11Component.cs" />
+    <Compile Include="Solvers\Day11Part2Solver.cs" />
+    <Compile Include="Solvers\Day11Classes\Day11SearchState.cs" />
+    <Compile Include="Solvers\Day11Solver.cs" />
+    <Compile Include="Solvers\Day1Classes\BlockLocation.cs" />
+    <Compile Include="Solvers\Day1Solver.cs" />
+    <Compile Include="Solvers\Day2Classes\Day2KeyPad.cs" />
+    <Compile Include="Solvers\Day2Classes\Day2Part1Keypad.cs" />
+    <Compile Include="Solvers\Day2Classes\Day2Part2Keypad.cs" />
+    <Compile Include="Solvers\Day2Solver.cs" />
+    <Compile Include="Solvers\Day1Classes\Direction.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solvers\Day12Classes\DecrementInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\IncrementInstruction.cs" />
+    <Compile Include="Solvers\Day12Classes\Instruction.cs" />
+    <Compile Include="Solvers\Day12Classes\UnsupportedInstruction.cs" />
+    <Compile Include="Solvers\Day10Classes\OutputNode.cs" />
+    <Compile Include="Solvers\Day10Classes\ValueNode.cs" />
+    <Compile Include="Solvers\Md5Hasher.cs" />
+    <Compile Include="StringExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="InputFiles\day10input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day12input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day15input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day18input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day1input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day11input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day20input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day21input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day22input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day23input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day24input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day25input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day2input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day3input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day4input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day5input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day6input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day7input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day8input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InputFiles\day9input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
