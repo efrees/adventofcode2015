@@ -48,8 +48,52 @@ impl Point3d {
         Point3d { x: x, y: y, z: z }
     }
 
+    pub fn origin() -> Point3d {
+        Point3d::new(0, 0, 0)
+    }
+
     pub fn manhattan_dist_to(&self, other: &Point3d) -> i64 {
         (self.x - other.x).abs() + (self.y - other.y).abs() + (self.z - other.z).abs()
+    }
+
+    pub fn manhattan_len(&self) -> i64 {
+        self.x.abs() + self.y.abs() + self.z.abs()
+    }
+
+    pub fn add(&self, other: &Point3d) -> Point3d {
+        Point3d {
+            x: self.x + other.x,
+            y: self.y + other.y,
+            z: self.z + other.z,
+        }
+    }
+
+    pub fn subtract(&self, other: &Point3d) -> Point3d {
+        Point3d {
+            x: self.x - other.x,
+            y: self.y - other.y,
+            z: self.z - other.z,
+        }
+    }
+
+    pub fn multiply(&self, scalar: i64) -> Point3d {
+        Point3d {
+            x: self.x * scalar,
+            y: self.y * scalar,
+            z: self.z * scalar,
+        }
+    }
+
+    pub fn divide(&self, scalar: i64) -> Point3d {
+        Point3d {
+            x: self.x / scalar,
+            y: self.y / scalar,
+            z: self.z / scalar,
+        }
+    }
+
+    pub fn dot_product(&self, other: &Point3d) -> i64 {
+        self.x * other.x + self.y * other.y + self.z * other.z
     }
 }
 
